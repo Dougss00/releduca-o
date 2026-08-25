@@ -1,0 +1,30 @@
+:root { --brand: #0868c9; --brand-dark: #064b91; --accent: #f5b400; --ink: #17324d; --soft: #eef6ff; }
+body { background: #f4f7fb; color: var(--ink); min-height: 100vh; }
+.app-header { background: linear-gradient(135deg, #fff 0%, #fff 60%, #eaf4ff 100%); border-bottom: 4px solid var(--brand); }
+.brand-panel { display: flex; align-items: center; gap: 2rem; }
+.brand-logo { width: min(360px, 38vw); height: auto; object-fit: contain; }
+.brand-divider { align-self: stretch; width: 1px; min-height: 130px; background: #c7d9ea; }
+.brand-copy { flex: 1; }
+.eyebrow { color: var(--brand); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+.display-title { color: var(--brand-dark); font-size: clamp(1.7rem, 3vw, 2.65rem); font-weight: 750; }
+.slogan { color: #5c7185; font-size: 1.08rem; font-style: italic; }
+.upload-card, .result-card, .metric-card { border-radius: 1rem; box-shadow: 0 10px 30px rgba(19, 54, 48, .08); }
+.drop-zone { border: 2px dashed #a9c8e5; border-radius: .85rem; background: var(--soft); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: .3rem; padding: 2rem; text-align: center; transition: .2s ease; }
+.drop-zone:hover, .drop-zone.is-dragging { border-color: var(--brand); background: #e2f0ff; }
+.upload-icon { display: grid; place-items: center; width: 2.7rem; height: 2.7rem; border-radius: 50%; background: var(--brand); color: white; font-size: 1.5rem; }
+.btn-primary { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand-dark); --bs-btn-hover-border-color: var(--brand-dark); }
+.btn-download { background: var(--accent); border-color: var(--accent); color: #22313f; font-weight: 700; }
+.btn-download:hover { background: #dca100; border-color: #dca100; color: #17212a; }
+.metric-card { background: white; padding: 1.1rem 1.25rem; height: 100%; }
+.metric-card span { display: block; color: #647772; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+.metric-card strong { font-size: 1.7rem; }
+.table-wrap { max-height: 68vh; border-radius: 1rem; }
+#result-table { font-size: .88rem; white-space: nowrap; }
+#result-table th { background: var(--brand-dark); color: white; text-align: center; }
+#result-table thead { position: sticky; top: 0; z-index: 2; }
+#result-table .establishment { position: sticky; left: 0; min-width: 260px; text-align: left; z-index: 1; }
+#result-table tbody .establishment { background: white; font-weight: 600; }
+#result-table td { text-align: center; }
+#result-table .total-cell { background: #eaf3fc; font-weight: 700; }
+@media (max-width: 767px) { .brand-panel { flex-direction: column; align-items: flex-start; gap: 1.2rem; } .brand-logo { width: min(360px, 88vw); } .brand-divider { width: 100%; height: 1px; min-height: 1px; } }
+@media (max-width: 576px) { .drop-zone { padding: 1.4rem .8rem; } #result-table .establishment { min-width: 210px; } }
